@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#character {
+    width: 256px;
+    height: 256px;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background-image: url('walking.png'); 
+    background-repeat: no-repeat;
+    background-size: 1024px 256px; 
+    transition: transform 0.1s linear; 
+}
+.walking {
+    animation: walk-cycle 2.4s steps(6) infinite; 
+}
+.resting {
+    animation: none; 
+}
+.left {
+    transform: scaleX(-1); 
+}
+@keyframes walk-cycle {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1024px 0; 
+    }}
